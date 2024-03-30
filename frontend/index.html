@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Forum</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="styles/global.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="styles/authentification.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="styles/header.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="styles/footer.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="styles/error.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="styles/fullThread.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="styles/dashboard.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="styles/userProfile.css" />
+
+</head>
+<body>
+    <header>
+        <a id="logout-link" >LOGOUT</a>
+        <button id="profile-button" class="header-button small-header-button">Profile</button>
+        <div id="vertical-line"></div>
+        <button id="heart-button" class="icon-button">
+            <svg id="heart-icon" width="30px" height="30px" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
+                <path d="M 15 26 
+                    C 12 20, 5 15, 5 10 
+                    C 5 5, 10 3, 15 8 
+                    C 20 3, 25 5, 25 10 
+                    C 25 15, 18 20, 15 26 Z"
+                    fill="none"
+                    stroke="red"
+                    stroke-width="2">
+                </path>
+            </svg>
+        </button>
+        <button id="watch-button" class="icon-button">
+            <svg id="watch-icon" width="30" height="30" xmlns="http://www.w3.org/2000/svg">
+                <ellipse cx="15" cy="15" rx="12" ry="10" stroke="black" stroke-width="2" fill="none"/>
+                <path d="M 3,15 Q 15,5 27,15" stroke="black" stroke-width="2" fill="none"/>
+                <path d="M 3,15 Q 15,25 27,15" stroke="black" stroke-width="2" fill="none"/>
+                <circle cx="15" cy="15" r="4" fill="black"/>
+                <line x1="5" y1="5" x2="25" y2="25" stroke="black" stroke-width="2"/>
+                <line x1="25" y1="5" x2="5" y2="25" stroke="black" stroke-width="2"/>
+            </svg>
+        </button>
+        <button class="header-button create-button" id="create-button">Create</button>
+        <button class="header-button small-header-button" id="edit-button">Edit</button>
+        <button class="header-button small-header-button" id="delete-button">Delete</button>
+    </header>
+    <main role="main">
+        <div id="error-popup">
+            <div class="error-header">
+                <h3>Error</h3>
+                <button id="error-popup-button">Close</button>
+            </div>
+            <p>Error message</p>
+        </div>
+        <div id="login-screen" class="screen auth-screen">
+            <form id="login-form" class="authentification-form">
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" placeholder="Enter email" required>
+                </div>
+                <div>
+                    <label for="password">Password:</label>
+                    <input type="password" name="password" placeholder="Password" required>
+                </div>
+                <div>
+                    <button type="submit">Submit</button>
+                </div>
+
+                <a id="register-link" class="authentification-form-link">Register here</a>
+            </form>
+        </div>
+        <div id="register-screen" class="screen auth-screen">
+            <form id="register-form" class="authentification-form">
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" placeholder="Enter email">
+                </div>
+                <div>
+                    <label for="name">Name:</label>
+                    <input name="name" placeholder="Enter name">
+                </div>
+                <div>
+                    <label for="password">Password:</label>
+                    <input type="password" name="password" placeholder="Password">
+                </div>
+                <div>
+                    <label for="confirm-password">Confirm Password:</label>
+                    <input type="password" name="confirmPassword" placeholder="Confirm password">
+                </div>
+                <div>
+                    <button type="submit">Submit</button>
+                </div>
+                <a id="login-link" class="authentification-form-link">Login here</a>
+            </form>
+        </div>
+        <div id="dashboard-screen" class="screen">
+            <div id="threads-list" data-threads-count="">
+                <li data-thread-id="" data-user-id="">
+                    <div class="threads-list-title"></div>
+                    <div class="author-container"><a class="threads-list-author"></a></div>
+                    <div class="threads-list-date-likes">
+                        <span class="threads-list-post-date"></span>
+                        <span class="threads-list-likes">
+                            <i class="threads-list-heart-icon"></i>
+                            <span class="likes-count"></span>
+                        </span>
+                    </div>
+                </li>
+            </div>
+            <div id="thread-screen">
+                <div id="thread-text" data-thread-id="" data-is-locked="">
+                    <h2>TitleTitle Title TitleTitle Title Title Title Title Title </h2>
+                    <div class="container-likes-lock">
+                        <span><i class="thread-heart-icon">♥ </i><span class="thread-likes">Likes: 69</span></span>
+                        <span><span class="thread-locked">LOCKED</span><i class="thread-lock-icon">🔒 </i></span>
+                    </div>
+                    <hr>
+                    <p>Content</p>
+                    <h4 class="bold">Comments</h4>
+                    <h4 id="thread-main-reply">reply</h4>
+                    <div id="thread-comments">
+                        <div class="thread-comment-box" data-hidden="false" data-comment-id="" data-parent-id="" data-user-id="">
+                            <div class="comment-header">
+                                <button class="comment-header-button"></button>
+                                <p class="comment-header-content comment-content" > 
+                                    <span class="comment-likes">13</span><i class="thread-heart-icon">♥ </i>
+                                </p>
+                                <p class="comment-header-content comment-content bold"> Date</p>
+                            </div>
+                            <p class="comment-content">Comment CommentCommentCommentComment Comment Comment Comment Comment CommentComment</p>
+                            <a class="reply comment-content comment-link">reply</a>
+                            <a class="edit comment-content comment-link">edit</a>
+                            <a class="delete comment-content comment-link">delete</a>
+                            <a class="like comment-content comment-link">like</a>
+                        </div>
+                        <div id="reply-box" data-parent-comment-id="" data-comment-id="" data-editing="false">
+                            <textarea id="thread-comment-input" name="commentBox" rows="6" cols="50" placeholder="Enter your comment here..."></textarea></textarea>
+                            <button id="thread-comment-button">Comment</button>
+                        </div>
+                    </div>
+                    <br>
+                </div>
+            </div>
+        </div>
+        <div id="full-thread-screen" class="screen" data-thread-id="">
+            <form id="full-thread-form">
+                <div>
+                    <label for="Title">Title:</label>
+                    <input name="title" placeholder="Enter title">
+                </div>
+                <div>
+                    <label for="Content">Content:</label>
+                    <textarea name="content" placeholder="Type your content here..."></textarea>
+                </div>
+                <div>
+                    <input type="checkbox" name="isPublic">
+                    Make thread public
+                </div>
+                <div id="lock-input">
+                    <input type="checkbox" name="lock">
+                    Make thread locked (permanent)
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        <div id="user-profile-screen" class="screen" data-user-id="">
+            <div id="user-profile-text">
+                <div class="profile-pic-container"><img src="profilePictures/defaultProfile.jpeg" alt="Profile picture of the user"></div>
+                <br>
+                <div class="dark-orange">Email:</div>
+                <div class="email-field"></div>
+                <br>
+                <div class="dark-orange">Name:</div>
+                <div class="name-field">akljshjfdljka hjslkjdfjhla;ksjdfljalskdjfl;ajs;ldkfj al;kjs ;lfjasl;kdj f;lkasjld;fk ja;lksdjf l;kasjlkjals df</div>
+                <br>
+                <div class="dark-orange">Permissions:</div>
+                <div class="admin-field">ADMIN</div>
+                <select id="admin-select" name="role">
+                    <option value="user">User</option>
+                    <option value="admin">Admin</option>
+                </select>
+                <button id="update-user-permissions-button" class="user-small-button">Update</button>
+                <br>
+                <hr>
+                <h3 class="dark-orange">Users threads:</h3>
+            </div>
+            <div id="user-profile-threads-list">
+                <div class="thread-box">
+                    <h4>Title</h4>
+                    <p>Content</p>
+                    <div class="thread-box-social-interaction-container">
+                        <div class="thread-box-likes">
+                            <i class="thread-heart-icon">♥</i><span>10lieks</span>
+                        </div>
+                        <div class="thread-box-comments">
+                            <i>&#x1F4AC;</i><span>13 comments</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="thread-box">
+                    <h4>Title</h4>
+                    <p>Content</p>
+                    <div class="thread-box-social-interaction-container">
+                        <div class="thread-box-likes">
+                            <i class="thread-heart-icon">♥</i><span>10lieks</span>
+                        </div>
+                        <div class="thread-box-comments">
+                            <i>&#x1F4AC;</i><span>13 comments</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="user-profile-update-screen" class="screen" data-user-id="">
+            <form id="user-profile-form" for="Updating user details">
+                <div class="profile-pic-container">
+                    <img id="update-user-image" src="profilePictures/defaultProfile.jpeg" alt="Profile picture of the user">
+                </div>
+                <label class="dark-orange" for="Profile Picture">Profile Picture:</label>
+                <input id="profile-picture-input" name="image" accept="image/jpeg, image/png, image/jpg" type="file">                
+                <button id="preview-button" class="user-small-button">Preview profile</button>
+                <label class="dark-orange" for="Email">Email:</label>
+                <input name="email" placeholder="New email"></input>
+                <br>
+                <label class="dark-orange" for="Name">Name:</label>
+                <input name="name" placeholder="New name">
+                <br>
+                <label class="dark-orange" for="password">Password:</label>
+                <input type="password" name="password" placeholder="New password">
+                <br>
+                <label class="dark-orange" for="confirm-password">Confirm Password:</label>
+                <input type="password" name="confirmPassword" placeholder="Confirm new password">
+                <br>
+                <button id="update-details-button" type="submit">Update</button>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <h1 id="qanda-logo">Forum</h1>
+        <p id="tristan-clinton-muehr">Made by Tristan Clinton-Muehr</p>
+    </footer>
+    <script type="module" src="src/main.js"></script>
+</body>
+</html>
+<!-- down to 400px wide, 700px high -->

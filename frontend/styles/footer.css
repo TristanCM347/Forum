@@ -1,0 +1,27 @@
+#qanda-logo {
+    position: absolute;
+    bottom: 5;
+    left: 0;
+    color: #87CEEB;
+    background-color: white;
+    font-size: 2em;
+    width: 120px;
+    height: 40px;
+    display: inline-block;
+    padding: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 0;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 5px;
+}
+
+#tristan-clinton-muehr {
+    position: absolute;
+    bottom: 5;
+    right: 0;
+    display: inline-block;
+    margin-right: 10px;
+    color: #C75B12;
+}

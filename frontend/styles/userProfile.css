@@ -1,0 +1,145 @@
+#user-profile-screen, #user-profile-update-screen {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    justify-content: flex-start; 
+}
+
+#user-profile-text, #user-profile-form {
+    margin-top: 20px;
+    width: 200px;
+    box-sizing: border-box;
+    word-wrap: break-word;
+}
+
+#user-profile-text h3 {
+    text-align: center;
+}
+
+#user-profile-text select {
+    margin-top: 5px;
+}
+
+#user-profile-text hr {
+    background-color: #C75B12;
+    border-color: #C75B12;
+}
+
+.profile-pic-container {
+    width: 200px;
+    height: 200px;
+    box-sizing: border-box;
+    border: 2px solid #C75B12;
+    border-radius: 10px;
+    margin-bottom: 5px;
+}
+
+.profile-pic-container img {
+    width: 100%;
+    height: 100%;
+}
+
+#user-profile-threads-list {
+    width: 90%;
+    margin-bottom: 10px;
+}
+
+.thread-box {
+    border: 1px solid #C75B12;
+    padding: 3%;
+    margin-bottom: 10px;
+}
+
+.thread-box h4 {
+    margin: 0;
+}
+
+.thread-box-social-interaction-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.thread-box-comments i, .thread-box-likes i {
+    margin-right: 5px;
+    font-style: normal; 
+}
+
+#user-profile-form input {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 5px;
+}
+
+#preview-button {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    color: white;
+    background-color: #87CEEB;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 5px #666;
+    border: none;
+    border-radius: 10px;
+    font-size: 1em;
+}
+
+#preview-button:active {
+    background-color: #87CEEB;
+    box-shadow: 0 2px #666;
+    transform: translateY(4px);
+}
+
+#update-details-button {
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+    font-size: 18px;
+    background-color: #87CEEB;
+    color: white;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 5px #666;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 40px;
+}
+
+#update-details-button:active {
+    background-color: #87CEEB;
+    box-shadow: 0 2px #666;
+    transform: translateY(4px);
+}
+
+#preview-button {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.user-small-button {
+    display: block;
+    color: white;
+    background-color: #87CEEB;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 5px #666;
+    border: none;
+    border-radius: 10px;
+    font-size: 1em;
+}
+
+.user-small-button:active {
+    background-color: #87CEEB;
+    box-shadow: 0 2px #666;
+    transform: translateY(4px);
+}
+
+#update-user-permissions-button {
+    margin-top: 10px;
+}

@@ -1,0 +1,132 @@
+#logout-link {
+    position: absolute;
+    top: 34px;
+    left: 12px;
+    margin: 0;
+    padding: 0;
+    display: none;
+    border: none;
+    font-size: 0.8em;
+    text-decoration: underline;
+    color: white;
+    cursor: pointer;
+}
+
+#vertical-line {
+    display: none;
+    position: absolute;
+    left: 76px;
+    top: 0;
+    height: 50px;
+    width: 2px;
+    background-color: #C75B12;
+    z-index: 1000;
+}
+
+#profile-button {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+}
+
+#profile-button:active {
+    transform: translateY(4px);
+}
+
+.header-button {
+    display: none;
+    position: absolute;
+    background-color: #87CEEB;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 5px #666;
+}
+
+.header-button:active {
+    background-color: #6ca0b8;
+    box-shadow: 0 2px #666;
+}
+
+.small-header-button {
+    height: 25px;
+    width: 70px;
+    font-size: 1.2em;
+}
+
+#create-button {
+    top: 23px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 35px;
+    width: 100px;
+    font-size: 1.5em;
+}
+
+#create-button:active {
+    transform: translate(-50%, -50%) translateY(4px);
+}
+
+#edit-button {
+    top: 23px;
+    left: 50%;
+    transform: translate(-50%, -50%) translateX(89px);
+}
+
+#edit-button:active {
+    transform: translate(-50%, -50%) translateY(4px) translateX(89px);
+}
+
+#delete-button {
+    top: 23px;
+    left: 50%;
+    transform: translate(-50%, -50%) translateX(163px);
+}
+
+#delete-button:active {
+    transform: translate(-50%, -50%) translateY(4px) translateX(163px);
+}
+
+#heart-button {
+    position: absolute;
+    top: 23px;
+    left: 50%;
+    transform: translate(-50%, -50%) translateX(-69px);
+}
+
+#heart-button:active {
+    transform: translate(-50%, -50%) translateX(-69px) translateY(4px);
+}
+
+#watch-button {
+    position: absolute;
+    top: 23px;
+    left: 50%;
+    transform: translate(-50%, -50%) translateX(-103px);
+}
+
+#watch-button:active {
+    transform: translate(-50%, -50%) translateX(-103px) translateY(4px);
+}
+
+.icon-button {
+    position: absolute;
+    display: none;
+    height: 30px;
+    width: 30px;
+    top: 23px;
+    background-color: #87CEEB;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 5px #666;
+    padding: 0;
+}
+
+.icon-button:active {
+    background-color: #6ca0b8;
+    box-shadow: 0 2px #666;
+}

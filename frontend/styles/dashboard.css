@@ -1,0 +1,239 @@
+#dashboard-screen {
+    display: none;
+    height: 100%;
+    flex-direction: row;
+    box-sizing: border-box;
+}
+
+#threads-list {
+    flex-shrink: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    border-right: 1px solid #C75B12;
+    width: 200px;
+    box-sizing: border-box;
+}
+
+#threads-list li {
+    padding: 10px;
+    border-bottom: 1px solid #C75B12;
+    height: 75px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.threads-list-title, .threads-list-author {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 100%;
+}
+
+.threads-list-title, .threads-list-author, .threads-list-date-likes {
+    margin: 2px 0;
+}
+
+.threads-list-title {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.author-container {
+    display: inline-block;
+    width: fit-content;
+}
+
+.container-likes-lock {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.threads-list-author {
+    margin-bottom: 5px;
+    color: #87CEEB;
+    display: inline-block;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.threads-list-date-likes {
+    display: flex;
+    justify-content: space-between;
+}
+
+.threads-list-post-date, .threads-list-likes {
+    font-size: 0.8em;
+}
+
+.threads-list-heart-icon {
+    color: red;
+}
+
+#threads-list li {
+    cursor: pointer;
+    background-color: #FFF8E7;
+}
+
+#threads-list li:hover {
+    background-color: #EEDCB1;
+}
+
+#thread-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    flex-grow: 1;
+    height: 100%;
+    min-width: 200px;
+    box-sizing: border-box;
+}
+
+#thread-screen i {
+    font-style: normal;
+}
+
+#thread-screen hr {
+    font-style: normal;
+    border: none;
+    height: 2px;
+    background-color: #C75B12;
+}
+
+#thread-text {
+    width: 90%;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    overflow: auto;
+}
+
+#thread-text h2, #thread-text p {
+    word-break: break-word;
+    hyphens: auto;
+}
+
+#thread-text h4 {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+#thread-main-reply {
+    color: #87CEEB;
+    text-decoration: underline;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+.thread-heart-icon {
+    color: red;
+}
+
+#thread-comments {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.thread-comment-box {
+    box-sizing: border-box;
+    display: block;
+    margin: 5px 0;
+    padding: 5px;
+    border: 1px solid #C75B12;
+}
+
+.comment-header {
+    display: flex;
+    align-items: center;
+    height: 20px;
+}
+
+.comment-header p {
+    margin-right: 5px;
+}
+
+.comment-header-button {
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    margin-right: 5px;
+    padding: 0;
+    text-align: center;
+    font-size: 10px;
+    background-color: inherit;
+    border-style: solid;
+    border-color: #87CEEB;
+    background-color: inherit;
+    border-radius: 5px;
+    box-sizing: border-box;
+    cursor: pointer;
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.comment-header-date {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.comment-content {
+    font-size: 0.8rem;
+    margin: 5px 0;
+}
+
+#reply-box {
+    box-sizing: border-box;
+    display: block;
+    margin: 5px 0;
+    padding: 0;
+    width: 100%;
+}
+
+#thread-comment-button {
+    margin-top: 1px;
+    box-sizing: border-box;
+    background-color: #87CEEB;
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5px;
+    border: none;
+    width: 100%;
+    height: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 5px #666;
+}
+
+#thread-comment-button:active {
+    background-color: #6ca0b8;
+    box-shadow: 0 2px #666;
+    transform: translateY(4px);
+}
+
+#thread-comment-input {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.comment-link {
+    color:#87CEEB;
+    padding: 0;
+    margin: 0;
+    margin-right: 5px;
+    text-decoration: underline;
+    cursor: pointer;
+}
